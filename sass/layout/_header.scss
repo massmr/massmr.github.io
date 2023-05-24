@@ -8,4 +8,11 @@ header {
     height: 44px;
     width: 162px;
   }
+  @media (min-width: $breakpoint_desktop){
+    height: 96px;
+    img {
+      height: 34.2px;
+      width: 200px;
+    }
+  }
 }
