@@ -10,30 +10,25 @@
   }
 }
 
-.flexRow {
-  display: flex;
-  flex-flow: row nowrap;
-}
-
-.center {
-justify-content: center;
-align-items: center;
-}
-
-.spaceBetween {
-  justify-content: space-between;
-}
-
-.columnNowrap {
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-article {
+.card {
   height: 250px;
   width: 100%;
+  h3 { margin: 0;}
+  h5 { margin: 0}
   img {
     height: 175px;
     width: 100%;
   }
+  .card_rowNowrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  .card_columnNowrap {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
