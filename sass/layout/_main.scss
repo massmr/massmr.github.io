@@ -1,11 +1,39 @@
-.row_nowrap {
+.locationSection {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  gap: 17px;
+  i {
+    height: 16px;
+    width: 12px;
+  }
 }
 
-.column_nowrap {
+.flexRow {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.center {
+justify-content: center;
+align-items: center;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+}
+
+.columnNowrap {
   display: flex;
   flex-flow: column nowrap;
+}
+
+article {
+  height: 250px;
+  width: 100%;
+  img {
+    height: 175px;
+    width: 100%;
+  }
 }
