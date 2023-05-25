@@ -9,6 +9,10 @@ section {
   width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 * {
   font-family: Roboto, sans-serif;
 }
@@ -18,9 +22,18 @@ h1 {
   font-weight: 700;
 }
 
+h2 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
 h3 {
   font-size: 16px;
   font-weight: 500;
+}
+
+h4 {
+  margin: 0;
 }
 
 header {
@@ -30,8 +43,8 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #FFFFFF;
-  position: relative;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 header img {
   height: 44px;
@@ -47,23 +60,51 @@ header img {
   }
 }
 
-.locationSection {
+.location_section {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 50px;
   gap: 17px;
   background-color: #D2D2D2;
 }
-.locationSection h3 {
+.location_section h3 {
   color: #353535;
 }
-.locationSection i {
+.location_section i {
   height: 16px;
   width: 12px;
   color: #353535;
+}
+
+.titlesButton_section {
+  background-color: #F6F6F6;
+}
+.titlesButton_section div {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.titlesButton_section div h1 {
+  color: #000000;
+  margin: 39.5px 42px 12px 42px;
+}
+.titlesButton_section div h2 {
+  color: #353535;
+  font-family: Roboto Thin, sans-serif;
+  margin: 0px 34px 27px 34px;
+}
+.titlesButton_section div a {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+  border-radius: 25px;
+  color: #FFFFFF;
+  padding: 13px 18.75px;
+  margin-bottom: 57px;
 }
 
 .card {
