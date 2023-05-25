@@ -5,6 +5,10 @@ body {
   padding: 0px;
 }
 
+section {
+  width: 100%;
+}
+
 * {
   font-family: Roboto, sans-serif;
 }
