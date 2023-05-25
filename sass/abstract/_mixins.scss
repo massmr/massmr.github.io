@@ -4,3 +4,8 @@
 @mixin boxShadow {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
+
+//modified typo
+@mixin fontLighter {
+  font-family: Roboto Thin, sans-serif;
+}
