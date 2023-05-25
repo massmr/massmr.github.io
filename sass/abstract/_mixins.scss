@@ -3,6 +3,7 @@
 //box shadow
 @mixin boxShadow {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
 //modified typo
