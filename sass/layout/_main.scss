@@ -6,9 +6,13 @@
   align-items: center;
   gap: 17px;
   background-color: $lightGrey;
+  h3 {
+    color: $ultraDarkGrey;
+  }
   i {
     height: 16px;
     width: 12px;
+    color: $ultraDarkGrey;
   }
 }
 
