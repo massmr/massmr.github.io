@@ -15,3 +15,8 @@
 @mixin linearGradient {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
+
+//button radius
+@mixin buttonRadius {
+  border-radius: 25px;
+}
