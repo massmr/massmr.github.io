@@ -92,6 +92,11 @@ header img {
   color: #000000;
   margin: 39.5px 42px 12px 42px;
 }
+@media (min-width: 1080px) {
+  .titlesButton_section div h1 {
+    font-size: 40px;
+  }
+}
 .titlesButton_section div h2 {
   color: #353535;
   font-family: Roboto Thin, sans-serif;

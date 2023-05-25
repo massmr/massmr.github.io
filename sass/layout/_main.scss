@@ -29,6 +29,9 @@
     h1 {
       color: $black;
       margin: 39.5px 42px 12px 42px;
+      @media (min-width: $breakpoint_desktop) {
+        font-size: 40px;
+      }
     }
     h2 {
       color: $ultraDarkGrey;
