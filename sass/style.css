@@ -1,0 +1,67 @@
+h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+header {
+  height: 63px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+header img {
+  height: 44px;
+  width: 162px;
+}
+@media (min-width: 1080px) {
+  header {
+    height: 96px;
+  }
+  header img {
+    height: 34.2px;
+    width: 200px;
+  }
+}
+
+.locationSection {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  background-color: #D2D2D2;
+}
+.locationSection i {
+  height: 16px;
+  width: 12px;
+}
+
+.card {
+  height: 250px;
+  width: 100%;
+}
+.card h3 {
+  margin: 0;
+}
+.card h5 {
+  margin: 0;
+}
+.card img {
+  height: 175px;
+  width: 100%;
+}
+.card_rowNowrap {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.card_columnNowrap {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */
