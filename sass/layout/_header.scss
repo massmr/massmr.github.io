@@ -7,7 +7,6 @@ header {
   justify-content: center;
   align-items: center;
   background-color: $white;
-  position: relative;
   @include boxShadow;
   img {
     height: 44px;
