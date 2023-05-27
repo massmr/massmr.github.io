@@ -49,6 +49,45 @@
   }
 }
 
+//Fonctionnement section
+.fonctionnement_section {
+  display: flex;
+  flex-direction: column;
+  &-cardDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    @media (min-width: $breakpoint_desktop) {
+      flex-direction: row;
+    }
+  }
+  &-card {
+    display: flex;
+    flex-flow: row nowrap;
+    p {
+      position: relative;
+      z-index: 1 ;
+      display: flex;
+      align-items: center;
+    }
+    div {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+      background-color: $grey;
+      @include boxShadow;
+      @include fonctionnementRadius;
+      padding: 28.5px 38px 28.5px 33.5px;
+      gap: 27px;
+      width: 325px;
+    }
+  }
+}
+
 //cards
 .card {
   height: 250px;
@@ -59,12 +98,12 @@
     height: 175px;
     width: 100%;
   }
-  &_rowNowrap {
+  &-rowNowrap {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
   }
-  &_columnNowrap {
+  &-columnNowrap {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
