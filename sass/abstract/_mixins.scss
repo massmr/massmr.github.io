@@ -23,3 +23,14 @@
 @mixin fonctionnementRadius {
   border-radius: 20px;
 }
+
+//margin & padding
+@mixin mobilePadding {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@mixin desktopPadding {
+  padding-left: 180px;
+  padding-right: 180px;
+}
