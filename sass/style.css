@@ -20,6 +20,7 @@ a {
 h1 {
   font-size: 24px;
   font-weight: 700;
+  margin: 0;
 }
 
 h2 {
@@ -30,9 +31,16 @@ h2 {
 h3 {
   font-size: 16px;
   font-weight: 500;
+  margin: 0;
 }
 
 h4 {
+  margin: 0;
+}
+
+p {
+  font-size: 14.18px;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -50,7 +58,7 @@ header img {
   height: 44px;
   width: 162px;
 }
-@media (min-width: 1080px) {
+@media (min-width: 1024px) {
   header {
     height: 96px;
   }
@@ -92,7 +100,7 @@ header img {
   color: #000000;
   margin: 39.5px 42px 12px 42px;
 }
-@media (min-width: 1080px) {
+@media (min-width: 1024px) {
   .titlesButton_section div h1 {
     font-size: 40px;
   }
@@ -112,26 +120,127 @@ header img {
   margin-bottom: 57px;
 }
 
-.card {
+.fonctionnement_section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 48px;
+  padding-bottom: 68px;
+}
+@media (min-width: 1352px) {
+  .fonctionnement_section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.fonctionnement_section h1 {
+  margin-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 768px) {
+  .fonctionnement_section h1 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 1352px) {
+  .fonctionnement_section h1 {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+}
+.fonctionnement_section-cardDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 768px) {
+  .fonctionnement_section-cardDiv {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .fonctionnement_section-cardDiv h3 {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1352px) {
+  .fonctionnement_section-cardDiv {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .fonctionnement_section-cardDiv h3 {
+    font-size: 16px;
+  }
+}
+.fonctionnement_section-card {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.fonctionnement_section-card .cardNumber {
+  background: #9356DC;
+  border-radius: 50%;
+  height: 24px;
+  padding: 0;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+.fonctionnement_section-card .cardNumber p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  width: 24px;
+  height: 24px;
+}
+.fonctionnement_section-card .cardBox {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6F6F6;
+  padding: 28.5px 38px 28.5px 33.5px;
+  gap: 27px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  right: 12px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+  border-radius: 20px;
+}
+.fonctionnement_section-card .cardBox .purpleIcon {
+  color: #9356DC;
+}
+
+.restaurants_section .card {
   height: 250px;
   width: 100%;
 }
-.card h3 {
+.restaurants_section .card h3 {
   margin: 0;
 }
-.card h5 {
+.restaurants_section .card h5 {
   margin: 0;
 }
-.card img {
+.restaurants_section .card img {
   height: 175px;
   width: 100%;
 }
-.card_rowNowrap {
+.restaurants_section .card-rowNowrap {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-.card_columnNowrap {
+.restaurants_section .card-columnNowrap {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
