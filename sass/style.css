@@ -56,14 +56,18 @@ p {
 footer {
   background-color: #353535;
   width: 100%;
+}
+footer section {
   height: 186px;
+  display: flex;
+  flex-direction: column;
 }
 footer img {
   padding-top: 22px;
   padding-left: 25px;
   padding-bottom: 16px;
-  height: 27px;
-  width: 137px;
+  height: 20px;
+  width: 100px;
   -webkit-filter: invert(100%);
   filter: invert(100%);
 }
@@ -85,6 +89,29 @@ footer i {
 }
 footer a {
   color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  footer section {
+    height: 114px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+  footer img {
+    position: relative;
+    bottom: 2px;
+    padding-right: 75px;
+    padding-bottom: 30px;
+  }
+  footer article {
+    flex-flow: row nowrap;
+    padding-bottom: 30px;
+  }
+  footer div {
+    width: 190px;
+  }
+  footer .footerText {
+    width: 130px;
+  }
 }
 
 header {

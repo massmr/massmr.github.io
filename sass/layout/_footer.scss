@@ -1,13 +1,17 @@
 footer {
   background-color: $ultraDarkGrey;
   width: 100%;
-  height: 186px;
+  section {
+    height: 186px;
+    display: flex;
+    flex-direction: column;
+  }
   img {
     padding-top: 22px;
     padding-left: 25px;
     padding-bottom: 16px;
-    height: 27px;
-    width: 137px;
+    height: 20px;
+    width: 100px;
     //invert logo color
     -webkit-filter: invert(100%);
     filter: invert(100%);
@@ -30,5 +34,28 @@ footer {
   }
   a {
     color: $white;
+  }
+  @media (min-width: $breakpoint_tablet) {
+    section {
+      height: 114px;
+      flex-direction: row-reverse;
+      align-items: flex-end;
+    }
+    img {
+      position: relative;
+      bottom: 2px;
+      padding-right: 75px;
+      padding-bottom: 30px;
+    }
+    article {
+      flex-flow: row nowrap;
+      padding-bottom: 30px;
+    }
+    div {
+      width: 190px;
+    }
+    .footerText {
+      width: 130px;
+    }
   }
 }
