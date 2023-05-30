@@ -1,4 +1,4 @@
-//location section
+//<<<<<<<<<<  location section  >>>>>>>>>>
 .location_section {
   display: flex;
   flex-flow: row nowrap;
@@ -17,7 +17,7 @@
   }
 }
 
-//titles and buttons
+//<<<<<<<<<<  titles and buttons  >>>>>>>>>>
 .titlesButton_section {
   background-color: $grey;
   div {
@@ -49,7 +49,7 @@
   }
 }
 
-//Fonctionnement section
+// <<<<<<<<<< Fonctionnement section  >>>>>>>>>>
 .fonctionnement_section {
   //general section properties
   display: flex;
@@ -61,114 +61,46 @@
     padding-bottom: 50px;
   }
   //title
-  h1 {
+  &-title {
     //space btw h1 and cards
     margin-bottom: 24px;
-    @include mobilePadding;
-    @media (min-width: $breakpoint_tablet) {
-      @include tabletPadding;
-    }
-    @media (min-width: $customBreakpoint_fonctionnement) {
-      @include desktopPadding;
-    }
+    @include totalPadding;
   }
+  //all 3 fonctionnement cards properties
   //to do :
   //- add max-width : 500px ?
-  //all of the 3 cards section general properties
-  &-cardDiv {
+  &-cardsContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
-    @include mobilePadding;
-    //for tablets : boxes in row & font size reduced
+    @include totalPadding;
+    //for tablets & desktop >> row
     @media (min-width: $breakpoint_tablet) {
       flex-direction: row;
       flex-wrap: nowrap;
-      @include tabletPadding;
-      //resize text inside card box to fit better
-      h3 {
-        font-size: 12px;
-      }
-    }
-    //for desktop : boxes in row & font size normal
-    @media (min-width: $customBreakpoint_fonctionnement) {
-      @include desktopPadding;
-      h3 {
-        font-size: 16px;
-      }
-    }
-  }
-  //card <article>
-  &-card {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center; //IOT align circle & box
-    width: 100%;
-    //purple circles
-    .cardNumber {
-      background: $primary;
-      border-radius: 50%;
-      height: 24px;
-      padding: 0;
-      display: flex;
-      position: relative;
-      z-index: 2 ;
-      //number inside purple circle
-      p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $white;
-        width: 24px;
-        height: 24px;
-      }
-    }
-    //card <article> grey box
-    .cardBox {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      justify-content: center;
-      background-color: $grey;
-      padding: 28.5px 38px 28.5px 33.5px;
-      gap: 27px;
-      width: 100%;
-      position: relative;
-      z-index: 1;
-      right: 12px;
-      @include boxShadow;
-      @include fonctionnementRadius;
-      //3rd icon purple color
-      .purpleIcon {
-        color: $primary;
-      }
     }
   }
 }
 
-//cards
+//<<<<<<<<<<  Restaurants section >>>>>>>>>>>>
 .restaurants_section {
-  .card {
-    height: 250px;
-    width: 100%;
-    h3 { margin: 0;}
-    h5 { margin: 0}
-    img {
-      height: 175px;
-      width: 100%;
-    }
-    &-rowNowrap {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-    }
-    &-columnNowrap {
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      align-items: center;
+  background-color: $grey;
+  padding-top: 54px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  &-title {
+    @include totalPadding;
+  }
+  &-cardsContainer {
+    display: flex;
+    flex-direction: column;
+    @include totalPadding;
+    @media (min-width: $breakpoint_tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
     }
   }
 }
