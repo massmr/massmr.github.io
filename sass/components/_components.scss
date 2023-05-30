@@ -61,37 +61,53 @@
 
 //<<<<<<<<<< Main page / Restaurant card >>>>>>>>>>
 .restaurants_section {
-  restaurants_section-singleCard {
+  //card general
+  &-singleCard {
     height: 250px;
     width: 100%;
-    max-width: 490px;
     @include cardRestaurantRadius;
     @include boxShadow;
-  }
-  img {
-    height: 175px;
-    width: 100%;
-  }
-  p {
-    background-color: $tertiary;
-    color: $darkGreen;
-    width: 80px;
-    height: 29px;
-    border-radius: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include boxShadow;
-  }
-  card_rowNowrap {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-  }
-  card_columnNowrap {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    //card image
+    img {
+      height: 175px;
+      width: 100%;
+      object-fit: cover;
+    }
+    //card "nouveau" green icon
+    .newIcon {
+      background-color: $tertiary;
+      color: $darkGreen;
+      width: 80px;
+      height: 29px;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include boxShadow;
+      //adjust 'nouveau' position
+      position: absolute;
+      top: 13px;
+      right: 17px;
+    }
+    //container : name + location + heart icon
+    .card_textContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 13px;
+      margin-right: 33px;
+      //name + location
+      &-div {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+      //fix light heart download issue
+    }
   }
 }
+
+
