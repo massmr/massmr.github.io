@@ -24,6 +24,10 @@
   border-radius: 20px;
 }
 
+@mixin cardRestaurantRadius {
+  border-radius: 15px;
+}
+
 //margin & padding
 @mixin mobilePadding {
   padding-left: 20px;
