@@ -39,3 +39,13 @@
   padding-left: 180px;
   padding-right: 180px;
 }
+
+@mixin totalPadding {
+  @include mobilePadding;
+  @media (min-width: $breakpoint_tablet) {
+    @include tabletPadding;
+  }
+  @media (min-width: $breakpoint_desktop) {
+    @include desktopPadding;
+  }
+}
