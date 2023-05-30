@@ -1,0 +1,97 @@
+//<<<<<<<<<< Main page / Fonctionnement card >>>>>>>>>>
+//single fonctionnement card properties
+.fonctionnement_section-singleCard {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; //IOT align circle & box
+  width: 100%;
+  //purple circles
+  .cardNumber {
+    background: $primary;
+    border-radius: 50%;
+    height: 24px;
+    padding: 0;
+    display: flex;
+    position: relative;
+    z-index: 2 ;
+    //number inside purple circle
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  //card <article> grey box
+  .cardBox {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: $grey;
+    padding: 28.5px 38px 28.5px 33.5px;
+    gap: 27px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    right: 12px;
+    @include boxShadow;
+    @include fonctionnementRadius;
+    //3rd icon purple color
+    .purpleIcon {
+      color: $primary;
+    }
+  }
+  @media (min-width: $breakpoint_tablet) {
+    //for tablet : reduce text size to fit better
+    h3 {
+      font-size: 12px;
+    }
+  }
+  //for desktop : font size normal
+  @media (min-width: $customBreakpoint_fonctionnement) {
+    h3 {
+      font-size: 16px;
+    }
+  }
+}
+
+//<<<<<<<<<< Main page / Restaurant card >>>>>>>>>>
+.restaurants_section {
+  restaurants_section-singleCard {
+    height: 250px;
+    width: 100%;
+    max-width: 490px;
+    @include cardRestaurantRadius;
+    @include boxShadow;
+  }
+  img {
+    height: 175px;
+    width: 100%;
+  }
+  p {
+    background-color: $tertiary;
+    color: $darkGreen;
+    width: 80px;
+    height: 29px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include boxShadow;
+  }
+  card_rowNowrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  card_columnNowrap {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
