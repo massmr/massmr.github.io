@@ -87,19 +87,22 @@
 .restaurants_section {
   background-color: $grey;
   padding-top: 54px;
+  padding-bottom: 66px;
   display: flex;
   flex-direction: column;
   gap: 28px;
+  @media (min-width: $breakpoint_desktop) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   &-title {
     @include totalPadding;
   }
   &-cardsContainer {
     display: flex;
     flex-direction: column;
+    gap: 18px;
     @include totalPadding;
-    @media (max-width: $breakpoint_tablet) {
-      gap: 18px;
-    }
     @media (min-width: $breakpoint_tablet) {
       display: grid;
       grid-template-columns: 1fr 1fr;

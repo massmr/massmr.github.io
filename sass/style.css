@@ -188,9 +188,16 @@ header img {
 .restaurants_section {
   background-color: #F6F6F6;
   padding-top: 54px;
+  padding-bottom: 66px;
   display: flex;
   flex-direction: column;
   gap: 28px;
+}
+@media (min-width: 1024px) {
+  .restaurants_section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 .restaurants_section-title {
   padding-left: 20px;
@@ -211,6 +218,7 @@ header img {
 .restaurants_section-cardsContainer {
   display: flex;
   flex-direction: column;
+  gap: 18px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -224,11 +232,6 @@ header img {
   .restaurants_section-cardsContainer {
     padding-left: 180px;
     padding-right: 180px;
-  }
-}
-@media (max-width: 768px) {
-  .restaurants_section-cardsContainer {
-    gap: 18px;
   }
 }
 @media (min-width: 768px) {
