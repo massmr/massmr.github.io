@@ -110,4 +110,23 @@
   }
 }
 
+//<<<<<<<<<<  Restaurant Page / card Menu >>>>>>>>>>
+.menu_section-card {
+  @include menuCardPadding;
+  //title properties
+  &-title {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      font-weight: 300;
+    }
+    hr {
+      background-color: $tertiary;
+      margin-left: 0; //to align left
+      width: 40px;
+      height: 3px;
+      border: none;
+    }
+  }
+}
 
