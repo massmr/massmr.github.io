@@ -32,6 +32,10 @@
   }
 }
 
+@mixin menuRadius {
+  border-radius: 40px 40px 0px 0px;
+}
+
 //margin & padding
 @mixin mobilePadding {
   padding-left: 20px;
@@ -56,4 +60,11 @@
   @media (min-width: $breakpoint_desktop) {
     @include desktopPadding;
   }
+}
+
+@mixin menuTitlePadding {
+  padding-top: 32px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+  padding-left: 17px;
 }
