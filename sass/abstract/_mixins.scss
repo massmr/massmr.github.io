@@ -13,7 +13,7 @@
 
 //linear gradient
 @mixin linearGradient {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
 }
 
 //radius
