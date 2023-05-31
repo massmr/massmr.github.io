@@ -111,8 +111,10 @@
 }
 
 //<<<<<<<<<<  Restaurant Page / card Menu >>>>>>>>>>
-.menu_section-card {
+//general menu properties
+.menu_section-cards {
   @include menuCardPadding;
+  max-width: 634px;
   //title properties
   &-title {
     display: flex;
@@ -123,9 +125,37 @@
     hr {
       background-color: $tertiary;
       margin-left: 0; //to align left
+      margin-bottom: 12px;
       width: 40px;
       height: 3px;
       border: none;
+    }
+  }
+  //all recepy cards container
+  &-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+  }
+  //single recepy card
+  &-singleCard {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 69px;
+    width: 100%;
+    background-color: $white;
+    border-radius: 15px;
+    gap: 5px;
+    p {
+      //inside card padding
+      padding: 0px 15px;
+    }
+    div {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
     }
   }
 }
