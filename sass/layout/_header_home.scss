@@ -1,6 +1,6 @@
 //header properties
 
-header {
+.header_home {
   height: 63px;
   width: 100%;
   display: flex;
@@ -8,13 +8,13 @@ header {
   align-items: center;
   background-color: $white;
   @include boxShadow;
-  img {
+  &img {
     height: 44px;
     width: 162px;
   }
   @media (min-width: $breakpoint_desktop){
     height: 96px;
-    img {
+    &img {
       height: 34.2px;
       width: 200px;
     }
