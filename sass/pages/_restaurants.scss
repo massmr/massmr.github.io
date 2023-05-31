@@ -7,6 +7,12 @@
   }
 }
 
+//IOT center the section when desktop mode
+.centerMenuSection-for-Desktop {
+  display: flex;
+  justify-content: center;
+}
+//menu section general properties
 .menu_section {
   background-color: $grey;
   width: 100%;
@@ -15,6 +21,10 @@
   @include menuRadius;
   position: relative;
   bottom: 40px;
+  @media (min-width: $breakpoint_desktop) {
+    max-width: 1055px;
+  }
+  //restaurant title properties
   &-title {
     display: flex;
     flex-direction: row;
@@ -22,6 +32,10 @@
     justify-content: space-between;
     align-items: center;
     @include menuTitlePadding;
+    @media (min-width: $breakpoint_desktop) {
+      justify-content: center;
+      gap: 24px;
+    }
     i {
       transform: scale(1.7);
       position: relative;
