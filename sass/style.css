@@ -330,6 +330,12 @@ footer a {
   }
 }
 
+.background_image img {
+  object-fit: cover;
+  height: 275px;
+  width: 100%;
+}
+
 .fonctionnement_section-singleCard {
   display: flex;
   flex-flow: row nowrap;
