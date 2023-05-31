@@ -511,6 +511,9 @@ footer a {
   padding-left: 13px;
   padding-bottom: 40px;
   max-width: 634px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 .menu_section-cards-title {
   display: flex;

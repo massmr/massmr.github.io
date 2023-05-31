@@ -115,6 +115,9 @@
 .menu_section-cards {
   @include menuCardPadding;
   max-width: 634px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   //title properties
   &-title {
     display: flex;
