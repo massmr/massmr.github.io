@@ -35,7 +35,7 @@
     justify-content: space-between;
     align-items: center;
     @include menuTitlePadding;
-    @media (min-width: $breakpoint_desktop) {
+    @media (min-width: $customBreakpoint_menu) {
       justify-content: center;
       gap: 24px;
     }
