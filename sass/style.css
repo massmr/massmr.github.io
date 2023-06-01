@@ -82,7 +82,7 @@ footer {
   width: 100%;
 }
 footer section {
-  height: 186px;
+  height: 176px;
   display: flex;
   flex-direction: column;
 }
@@ -114,7 +114,7 @@ footer i {
 footer a {
   color: #FFFFFF;
 }
-@media (min-width: 768px) {
+@media (min-width: 914px) {
   footer section {
     height: 114px;
     flex-direction: row-reverse;
