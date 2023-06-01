@@ -113,15 +113,15 @@
 //<<<<<<<<<<  Restaurant Page / card Menu >>>>>>>>>>
 //general menu properties
 .menu_section-cards {
-  @include menuCardPadding;
-  max-width: 634px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  //title properties
+  align-items: center;
+  //category title properties (starter....)
   &-title {
     display: flex;
     flex-direction: column;
+    @include menuCardPadding;
     h3 {
       font-weight: 300;
     }
@@ -134,11 +134,16 @@
       border: none;
     }
   }
-  //all recepy cards container
+  //title + recipies container
+  &-categoryContainer {
+    max-width: 634px;
+  }
+  //only recepy cards container
   &-container {
     display: flex;
     flex-flow: column nowrap;
     gap: 12px;
+    @include menuCardPadding;
   }
   //single recepy card
   &-singleCard {
