@@ -75,55 +75,76 @@
 }
 
 //<<<<<<<<<< Main page / Restaurant card >>>>>>>>>>
-.restaurants_section {
-  //card general
-  &-singleCard {
-    height: 250px;
+//restaurant one card general properties
+.restaurants_section-singleCard {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  @include cardRestaurantRadius;
+  @include boxShadow;
+  //restaurant card image
+  img {
+    height: 175px;
     width: 100%;
-    @include cardRestaurantRadius;
+    object-fit: cover;
+  }
+  //card "nouveau" green icon
+  .newIcon {
+    background-color: $tertiary;
+    color: $darkGreen;
+    width: 80px;
+    height: 29px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include boxShadow;
-    //card image
-    img {
-      height: 175px;
-      width: 100%;
-      object-fit: cover;
-    }
-    //card "nouveau" green icon
-    .newIcon {
-      background-color: $tertiary;
-      color: $darkGreen;
-      width: 80px;
-      height: 29px;
-      border-radius: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      @include boxShadow;
-      //adjust 'nouveau' position
-      position: absolute;
-      top: 13px;
-      right: 17px;
-    }
-    //container : name + location + heart icon
-    .card_textContainer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      margin-left: 13px;
-      margin-right: 33px;
-      //name + location
-      &-div {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: flex-start;
-        margin-top: 10px;
-      }
-      i {
-        transform: scale(1.5, 1.7);
-      }
-    }
+    //adjust 'nouveau' position
+    position: absolute;
+    top: 13px;
+    right: 17px;
+  }
+  //container : name + location
+  .card_textContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    //IOT to place the text inside its parent
+    position: absolute;
+    left: 13px;
+    bottom: 20px;
+  }
+}
+//icons properties
+.card_heartIcon {
+  //rescale icon
+  transform: scale(1.5, 1.7);
+  //IOT to place icon in parent
+  position: absolute;
+  right: 50px;
+  bottom: 55px;
+  //cancel link property
+  display: inline-block;
+  pointer-events: none;
+  cursor: default;
+  //animation
+  i {
+    position: absolute; //IOT to place both icons in same place
+  }
+  &:hover {
+    .heartRegular { display: none;}
+    .heartGradient { display: inline-block;}
+  }
+  //display regular heart when active iot to apply a gradient
+  .heartGradient {
+    //display: none;
+    background-image: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+    background-size: 100%;
+    //Use the text as a mask for the background
+    //This will show the gradient as a text color rather than element bg
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 

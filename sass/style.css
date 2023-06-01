@@ -472,6 +472,7 @@ footer a {
 .restaurants_section-singleCard {
   height: 250px;
   width: 100%;
+  position: relative;
   border-radius: 15px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   position: relative;
@@ -502,21 +503,37 @@ footer a {
 }
 .restaurants_section-singleCard .card_textContainer {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 13px;
-  margin-right: 33px;
-}
-.restaurants_section-singleCard .card_textContainer-div {
-  display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 10px;
+  position: absolute;
+  left: 13px;
+  bottom: 20px;
 }
-.restaurants_section-singleCard .card_textContainer i {
+
+.card_heartIcon {
   transform: scale(1.5, 1.7);
+  position: absolute;
+  right: 50px;
+  bottom: 55px;
+  display: inline-block;
+  pointer-events: none;
+  cursor: default;
+}
+.card_heartIcon i {
+  position: absolute;
+}
+.card_heartIcon:hover .heartRegular {
+  display: none;
+}
+.card_heartIcon:hover .heartGradient {
+  display: inline-block;
+}
+.card_heartIcon .heartGradient {
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .menu_section-cards {
