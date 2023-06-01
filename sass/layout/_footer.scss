@@ -35,7 +35,7 @@ footer {
   a {
     color: $white;
   }
-  @media (min-width: $breakpoint_tablet) {
+  @media (min-width: $customBreakpoint_footer) {
     section {
       height: 114px;
       flex-direction: row-reverse;
