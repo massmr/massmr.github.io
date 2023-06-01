@@ -1,3 +1,17 @@
+//<<<<<<<<<< General >>>>>>>>>>>
+//button
+.button {
+  @include linearGradient;
+  @include boxShadow;
+  @include buttonRadius;
+  color: $white;
+  padding: 13px 18.75px;
+  margin-bottom: 57px;
+  &-pages {
+    width: 186px;
+  }
+}
+
 //<<<<<<<<<< Main page / Fonctionnement card >>>>>>>>>>
 //single fonctionnement card properties
 .fonctionnement_section-singleCard {
