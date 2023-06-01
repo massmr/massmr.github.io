@@ -18,7 +18,7 @@
 }
 
 //<<<<<<<<<<  titles and buttons  >>>>>>>>>>
-.titlesButton_section {
+.button_section {
   background-color: $grey;
   div {
     display: flex;
@@ -37,14 +37,6 @@
       color: $ultraDarkGrey;
       @include fontLighter;
       margin: 0px 34px 27px 34px;
-    }
-    a {
-      @include linearGradient;
-      @include boxShadow;
-      @include buttonRadius;
-      color: $white;
-      padding: 13px 18.75px;
-      margin-bottom: 57px;
     }
   }
 }
