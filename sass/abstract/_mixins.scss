@@ -16,6 +16,34 @@
   background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
 }
 
+//like button
+@mixin likeButton {
+  //place both icons in the same place
+  .likeActive, .likeDefault {
+    display: block;
+    position: absolute;
+  }
+  //heart gradient properties
+  .likeActive {
+    //not display this icon when the button is not actived
+    display: none;
+    //general heart gradient properties
+    background-image: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+    background-size: 100%;
+    //Use the text as a mask for the background
+    //This will show the gradient as a text color rather than element bg
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  //transformation
+  &:active .likeActive {
+    display: block;
+  }
+  &:active .likeDefault {
+    display: none;
+  }
+}
+
 //radius
 @mixin buttonRadius {
   border-radius: 25px;
