@@ -1,4 +1,5 @@
 /*mixins*/
+@import 'fontawesome/fontawesome.css';
 body {
   width: 100%;
   margin: 0px;
@@ -516,24 +517,32 @@ footer a {
   position: absolute;
   right: 50px;
   bottom: 55px;
-  display: inline-block;
-  pointer-events: none;
-  cursor: default;
 }
 .card_heartIcon i {
   position: absolute;
 }
-.card_heartIcon:hover .heartRegular {
-  display: none;
-}
-.card_heartIcon:hover .heartGradient {
-  display: inline-block;
-}
 .card_heartIcon .heartGradient {
+  display: none;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.like_click_button {
+  height: 40px;
+  width: 40px;
+  background-color: #99E2D0;
+  opacity: 80%;
+  position: absolute;
+  right: 18px;
+  bottom: 22px;
+}
+.like_click_button-1:active #like_gradient1 {
+  display: inline-block;
+}
+.like_click_button-1:active #like_regular1 {
+  display: none;
 }
 
 .menu_section-cards {
@@ -589,6 +598,50 @@ footer a {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+}
+
+/*!
+ * Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+:root, :host {
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.ttf") format("truetype");
+}
+.far,
+.fa-regular {
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+:root, :host {
+  --fa-style-family-classic: "Font Awesome 6 Free";
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype");
+}
+.fas,
+.fa-solid {
+  font-weight: 900;
 }
 
 /*# sourceMappingURL=style.css.map */
