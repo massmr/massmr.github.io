@@ -433,10 +433,38 @@ footer a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.card_likeButton:focus .likeActive {
+.card_likeButton:active .likeActive {
   display: block;
 }
-.card_likeButton:focus .likeDefault {
+.card_likeButton:active .likeDefault {
+  display: none;
+}
+
+.page_likeButton {
+  transform: scale(1.2, 1.2);
+  position: relative;
+  top: 10px;
+}
+@media (min-width: 635px) {
+  .page_likeButton {
+    left: 10px;
+  }
+}
+.page_likeButton .likeActive, .page_likeButton .likeDefault {
+  display: block;
+  position: absolute;
+}
+.page_likeButton .likeActive {
+  display: none;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.page_likeButton:active .likeActive {
+  display: block;
+}
+.page_likeButton:active .likeDefault {
   display: none;
 }
 
