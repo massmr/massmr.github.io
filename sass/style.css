@@ -416,6 +416,30 @@ footer a {
   margin-bottom: 40px;
 }
 
+.card_likeButton {
+  transform: scale(1.5, 1.7);
+  position: absolute;
+  right: 50px;
+  bottom: 55px;
+}
+.card_likeButton .likeActive, .card_likeButton .likeDefault {
+  display: block;
+  position: absolute;
+}
+.card_likeButton .likeActive {
+  display: none;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card_likeButton:focus .likeActive {
+  display: block;
+}
+.card_likeButton:focus .likeDefault {
+  display: none;
+}
+
 .fonctionnement_section-singleCard {
   display: flex;
   flex-flow: row nowrap;
@@ -510,39 +534,6 @@ footer a {
   position: absolute;
   left: 13px;
   bottom: 20px;
-}
-
-.card_heartIcon {
-  transform: scale(1.5, 1.7);
-  position: absolute;
-  right: 50px;
-  bottom: 55px;
-}
-.card_heartIcon i {
-  position: absolute;
-}
-.card_heartIcon .heartGradient {
-  display: none;
-  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.like_click_button {
-  height: 40px;
-  width: 40px;
-  background-color: #99E2D0;
-  opacity: 80%;
-  position: absolute;
-  right: 18px;
-  bottom: 22px;
-}
-.like_click_button-1:active #like_gradient1 {
-  display: inline-block;
-}
-.like_click_button-1:active #like_regular1 {
-  display: none;
 }
 
 .menu_section-cards {

@@ -1,5 +1,7 @@
 //<<<<<<<<<< General >>>>>>>>>>>
-//button
+//<<<<<<<<<< Buttons >>>>>>>>>>>
+
+//simple button
 .button {
   @include linearGradient;
   @include boxShadow;
@@ -10,6 +12,40 @@
   &-pages {
     width: 186px;
     margin-bottom: 40px;
+  }
+}
+
+//Like button
+.card_likeButton {
+  //rescale icons
+  transform: scale(1.5, 1.7);
+  //Place the button in right bottom of the card
+  position: absolute;
+  right: 50px;
+  bottom: 55px;
+  //place both icons in the same place
+  .likeActive, .likeDefault {
+    display: block;
+    position: absolute;
+  }
+  //heart gradient properties
+  .likeActive {
+    //not display this icon when the button is not actived
+    display: none;
+    //general heart gradient properties
+    background-image: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+    background-size: 100%;
+      //Use the text as a mask for the background
+      //This will show the gradient as a text color rather than element bg
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  //transformation
+  &:focus .likeActive {
+    display: block;
+  }
+  &:focus .likeDefault {
+    display: none;
   }
 }
 
@@ -114,37 +150,6 @@
     position: absolute;
     left: 13px;
     bottom: 20px;
-  }
-}
-//icons properties
-.card_heartIcon {
-  //rescale icon
-  transform: scale(1.5, 1.7);
-  //IOT to place icon in parent
-  position: absolute;
-  right: 50px;
-  bottom: 55px;
-  //cancel link property
-  display: inline-block;
-  pointer-events: none;
-  cursor: default;
-  //animation
-  i {
-    position: absolute; //IOT to place both icons in same place
-  }
-  &:hover {
-    .heartRegular { display: none;}
-    .heartGradient { display: inline-block;}
-  }
-  //display regular heart when active iot to apply a gradient
-  .heartGradient {
-    //display: none;
-    background-image: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
-    background-size: 100%;
-    //Use the text as a mask for the background
-    //This will show the gradient as a text color rather than element bg
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 }
 
