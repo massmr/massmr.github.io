@@ -30,7 +30,7 @@
 .page_likeButton {
   //rescale icons
   transform: scale(1.2, 1.2);
-  //place icons
+  //place button at the right of restaurant's name
   position: relative;
   top: 10px;
   @media (min-width: $customBreakpoint_menu) {
