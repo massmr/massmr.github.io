@@ -15,6 +15,24 @@
   }
 }
 
+//like button
+//Hide input
+.hacky-input{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 20px;
+  bottom: 25px;
+  z-index: 1;
+  opacity: 0;
+  //transformation
+  &:checked + label .likeActive {
+    display: block;
+  }
+  &:checked + label .likeDefault {
+    display: none;
+  }
+}
 // Main page like button
 .card_likeButton {
   //rescale icons
@@ -23,9 +41,8 @@
   position: absolute;
   right: 50px;
   bottom: 55px;
-  @include likeButton;
+  @include likeButton; //shared properties
 }
-
 //Like button for pages
 .page_likeButton {
   //rescale icons
@@ -33,10 +50,10 @@
   //place button at the right of restaurant's name
   position: relative;
   top: 10px;
+  @include likeButton; //shared properties
   @media (min-width: $customBreakpoint_menu) {
     left: 10px;
   }
-  @include likeButton;
 }
 
 //<<<<<<<<<< Main page / Fonctionnement card >>>>>>>>>>

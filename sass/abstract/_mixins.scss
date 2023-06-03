@@ -16,7 +16,8 @@
   background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
 }
 
-//like button
+//like button same properties shared in restaurant's
+//card && menu title
 @mixin likeButton {
   //place both icons in the same place
   .likeActive, .likeDefault {
@@ -34,13 +35,6 @@
     //This will show the gradient as a text color rather than element bg
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  //transformation
-  &:active .likeActive {
-    display: block;
-  }
-  &:active .likeDefault {
-    display: none;
   }
 }
 

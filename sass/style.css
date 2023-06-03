@@ -416,6 +416,22 @@ footer a {
   margin-bottom: 40px;
 }
 
+.hacky-input {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 20px;
+  bottom: 25px;
+  z-index: 1;
+  opacity: 0;
+}
+.hacky-input:checked + label .likeActive {
+  display: block;
+}
+.hacky-input:checked + label .likeDefault {
+  display: none;
+}
+
 .card_likeButton {
   transform: scale(1.5, 1.7);
   position: absolute;
@@ -433,22 +449,11 @@ footer a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.card_likeButton:active .likeActive {
-  display: block;
-}
-.card_likeButton:active .likeDefault {
-  display: none;
-}
 
 .page_likeButton {
   transform: scale(1.2, 1.2);
   position: relative;
   top: 10px;
-}
-@media (min-width: 635px) {
-  .page_likeButton {
-    left: 10px;
-  }
 }
 .page_likeButton .likeActive, .page_likeButton .likeDefault {
   display: block;
@@ -461,11 +466,10 @@ footer a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.page_likeButton:active .likeActive {
-  display: block;
-}
-.page_likeButton:active .likeDefault {
-  display: none;
+@media (min-width: 635px) {
+  .page_likeButton {
+    left: 10px;
+  }
 }
 
 .fonctionnement_section-singleCard {
