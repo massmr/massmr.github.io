@@ -15,46 +15,72 @@
   }
 }
 
-//like button
-//Hide input
-.hacky-input{
-  position: absolute;
-  height: 30px;
+// LIKE BUTTON ::: MAIN PAGE AND RESTAURANT PAGE
+/*use of input to keep selector active after clicking :
+put it on top layer and make it invisible*/
+/*input + label : position absolute IOT put both in
+same place*/
+
+//general like button style
+.likeButton {
   width: 30px;
-  right: 20px;
-  bottom: 25px;
-  z-index: 1;
-  opacity: 0;
-  //transformation
-  &:checked + label .likeActive {
-    display: block;
-  }
-  &:checked + label .likeDefault {
-    display: none;
+  height: 30px;
+  &-input{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    z-index: 1; //put input on top layer
+    opacity: 0;
+    //input change of state
+    &:checked + label .likeActive {
+      display: block;
+    }
+    &:checked + label .likeDefault {
+      display: none;
+    }
   }
 }
-// Main page like button
-.card_likeButton {
-  //rescale icons
-  transform: scale(1.5, 1.7);
-  //Place the button in right bottom of the card
+
+//main page like button specific styles
+.likeButtonCard {
   position: absolute;
-  right: 50px;
-  bottom: 55px;
-  @include likeButton; //shared properties
-}
-//Like button for pages
-.page_likeButton {
-  //rescale icons
-  transform: scale(1.2, 1.2);
-  //place button at the right of restaurant's name
-  position: relative;
-  top: 10px;
-  @include likeButton; //shared properties
-  @media (min-width: $customBreakpoint_menu) {
-    left: 10px;
+  //place button
+  right: 25px;
+  bottom: 25px;
+  .likeButton-label {
+    position: absolute;
+    //rescale icons
+    transform: scale(1.55, 1.75);
+    @include likeButton; //shared properties
   }
 }
+
+//menu page like button specific style
+.likeButtonMenu {
+  position: absolute;
+  //place button
+  right: 27px;
+  top: 62px;
+  @media (min-width: $customBreakpoint_menu) {
+    position: initial; //get back to initial
+    //position when desktop mode
+  }
+  .likeButton-label {
+    position: absolute;
+    //rescale icons
+    transform: scale(1.1, 1.1);
+    @include likeButton; //shared properties
+    @media (min-width: $customBreakpoint_menu) {
+      //position icons inside input
+      position: relative;
+      top: 23px;
+      left: 6px;
+    }
+  }
+}
+
+
+
 
 //<<<<<<<<<< Main page / Fonctionnement card >>>>>>>>>>
 //single fonctionnement card properties
