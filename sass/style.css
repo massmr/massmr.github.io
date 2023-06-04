@@ -423,6 +423,7 @@ same place*/
 .likeButton {
   width: 30px;
   height: 30px;
+  position: absolute;
 }
 .likeButton-input {
   position: absolute;
@@ -439,7 +440,6 @@ same place*/
 }
 
 .likeButtonCard {
-  position: absolute;
   right: 25px;
   bottom: 25px;
 }
@@ -460,13 +460,18 @@ same place*/
 }
 
 .likeButtonMenu {
-  position: absolute;
   right: 27px;
   top: 62px;
 }
 @media (min-width: 635px) {
   .likeButtonMenu {
     position: initial;
+  }
+}
+@media (max-width: 635px) {
+  .likeButtonMenu .likeButton-input {
+    bottom: 30px;
+    right: 10px;
   }
 }
 .likeButtonMenu .likeButton-label {
@@ -487,7 +492,7 @@ same place*/
 @media (min-width: 635px) {
   .likeButtonMenu .likeButton-label {
     position: relative;
-    top: 23px;
+    top: 21.5px;
     left: 6px;
   }
 }

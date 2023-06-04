@@ -25,12 +25,13 @@ same place*/
 .likeButton {
   width: 30px;
   height: 30px;
+  position: absolute;
   &-input{
     position: absolute;
     height: 20px;
     width: 20px;
     z-index: 1; //put input on top layer
-    opacity: 0;
+    opacity: 0; //make input invisible
     //input change of state
     &:checked + label .likeActive {
       display: block;
@@ -43,7 +44,6 @@ same place*/
 
 //main page like button specific styles
 .likeButtonCard {
-  position: absolute;
   //place button
   right: 25px;
   bottom: 25px;
@@ -57,7 +57,6 @@ same place*/
 
 //menu page like button specific style
 .likeButtonMenu {
-  position: absolute;
   //place button
   right: 27px;
   top: 62px;
@@ -65,6 +64,16 @@ same place*/
     position: initial; //get back to initial
     //position when desktop mode
   }
+  //input needs to be specifically replaced for
+  //menu in mobile mode
+  .likeButton-input {
+    @media (max-width: $customBreakpoint_menu) {
+      bottom: 30px;
+      right: 10px;
+    }
+  }
+  //label needs a spepcific rescale in menu pages
+  //and needs to be replaced in desktop mode
   .likeButton-label {
     position: absolute;
     //rescale icons
@@ -73,7 +82,7 @@ same place*/
     @media (min-width: $customBreakpoint_menu) {
       //position icons inside input
       position: relative;
-      top: 23px;
+      top: 21.5px;
       left: 6px;
     }
   }
