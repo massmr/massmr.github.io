@@ -420,6 +420,8 @@ footer a {
 put it on top layer and make it invisible*/
 /*input + label : position absolute IOT put both in
 same place*/
+/* label properties are described inside a mixin
+(likeButton)*/
 .likeButton {
   width: 30px;
   height: 30px;
