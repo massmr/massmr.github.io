@@ -6,6 +6,11 @@
   position: relative;
 }
 
+//box shadow hover
+@mixin boxShadowHover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+
 //modified typo
 @mixin fontLighter {
   font-family: Roboto Thin, sans-serif;
@@ -15,6 +20,12 @@
 @mixin linearGradient {
   background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
 }
+
+//linear gradient hover
+@mixin linearGradientHover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
 
 //like button same properties shared in restaurant's
 //card && menu title
