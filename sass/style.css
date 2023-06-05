@@ -414,14 +414,14 @@ footer a {
 }
 
 .button {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  position: relative;
-  border-radius: 25px;
   color: #FFFFFF;
   padding: 13px 18.75px;
   margin-bottom: 57px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
   transition: box-shadow 0.3s ease-in-out;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 .button-pages {
   width: 186px;
