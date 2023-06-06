@@ -1,10 +1,39 @@
 .loader {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  z-index: 1;
-  i {
-    width: 100px;
-    height: 100px;
+  width: calc(100% / 5); /* control the size */
+  @media (min-width: $breakpoint_tablet) {
+    width: calc(100% / 15);
+  }
+  @media (min-width: $breakpoint_desktop) {
+    width: calc(100% / 20);
+  }
+  aspect-ratio: 1;
+  display: grid;
+  //opacity effect
+  -webkit-mask: conic-gradient(from 15deg, #0003,#000);
+  //timing
+  animation: load 1450ms steps(12) infinite;
+  //balls integration :
+  @include loader; //4 balls
+  &:before, &:after{ //4 balls - include :after > factorize content & grid
+    @include loader;
+    content: "";
+    grid-area: 1/1;
+    transform: rotate(30deg);
+  }
+  &:after { //4 balls
+    transform: rotate(60deg);
+  }
+  //rotation
+  @keyframes load {
+    from {transform: rotate(0turn)}
+    to   {transform: rotate(1turn)}
   }
 }
+.loaderContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
