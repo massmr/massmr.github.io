@@ -152,23 +152,43 @@
   //single recepy card
   &-singleCard {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     height: 69px;
     width: 100%;
     background-color: $white;
     border-radius: 15px;
-    gap: 5px;
     @include boxShadow;
-    p {
-      //inside card padding
-      padding: 0px 15px;
-    }
-    div {
+    &-textContainer {
       display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      width: 100%;
+      gap: 5px;
+      p {
+        //inside card padding
+        padding: 0px 15px;
+      }
+      .priceSpecContainer{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+      }
+    }
+    &-checkContainer {
+      width: 59px;
+      background-color: $tertiary;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        color: white;
+        transform: scale(1.3);
+      }
     }
   }
 }
