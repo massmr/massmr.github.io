@@ -1,0 +1,104 @@
+//<<<<<<<<<< Buttons >>>>>>>>>>>
+
+//simple button
+.button {
+  //general properties
+  &-pages {
+    width: 186px;
+    margin-bottom: 40px;
+  }
+  color: $white;
+  padding: 13px 18.75px;
+  margin-bottom: 57px;
+  @include buttonRadius;
+  //box shadow + transition
+  @include boxShadow;
+  transition: box-shadow 0.3s ease-in-out;
+  @include linearGradient;
+  //apply hover transition
+  &:hover {
+    @include linearGradientHover;
+    @include boxShadowHover;
+  }
+}
+
+
+
+//___________________________________________________________________
+
+
+
+// LIKE BUTTON ::: MAIN PAGE AND RESTAURANT PAGE
+/*use of input to keep selector active after clicking :
+put it on top layer and make it invisible*/
+/*input + label : position absolute IOT put both in
+same place*/
+/* label properties are described inside a mixin
+(likeButton)*/
+
+//general like button style
+.likeButton {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  &-input{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    z-index: 1; //put input on top layer
+    opacity: 0; //make input invisible
+    //input change of state
+    &:checked + label .likeActive {
+      display: block;
+    }
+    &:checked + label .likeDefault {
+      display: none;
+    }
+  }
+}
+
+//main page like button specific styles
+.likeButtonCard {
+  //place button
+  right: 25px;
+  bottom: 25px;
+  .likeButton-label {
+    position: absolute;
+    //rescale icons
+    transform: scale(1.55, 1.75);
+    @include likeButton; //shared properties
+  }
+}
+
+//menu page like button specific style
+.likeButtonMenu {
+  //place button
+  right: 27px;
+  top: 62px;
+  @media (min-width: $customBreakpoint_menu) {
+    position: initial; //get back to initial
+    //position when desktop mode
+  }
+  //input needs to be specifically replaced for
+  //menu in mobile mode
+  .likeButton-input {
+    @media (max-width: $customBreakpoint_menu) {
+      bottom: 30px;
+      right: 10px;
+    }
+  }
+  //label needs a spepcific rescale in menu pages
+  //and needs to be replaced in desktop mode
+  .likeButton-label {
+    position: absolute;
+    //rescale icons
+    transform: scale(1.1, 1.1);
+    @include likeButton; //shared properties
+    @media (min-width: $customBreakpoint_menu) {
+      //position icons inside input
+      position: relative;
+      top: 21.5px;
+      left: 6px;
+    }
+  }
+}
