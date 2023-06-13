@@ -138,18 +138,22 @@
       border: none;
     }
   }
-  //title + recipies container
+  //tContains all cards and title fm one category (entree, plats or desserts)
   &-categoryContainer {
     max-width: 634px;
   }
-  //only recepy cards container
+  //Contains all cards fm one category (entree plats or dessert)
   &-container {
     display: flex;
     flex-flow: column nowrap;
     gap: 12px;
     @include menuCardPadding;
   }
-  //single recepy card
+
+  //___________________________________
+
+  //One single card : one recepy
+  // animations are inside this part
   &-singleCard {
     display: flex;
     flex-direction: row;
@@ -159,7 +163,10 @@
     width: 100%;
     background-color: $white;
     border-radius: 15px;
+    overflow: hidden;
     @include boxShadow;
+
+    //Contains all text elements inside a single card
     &-textContainer {
       display: flex;
       flex-direction: column;
@@ -176,7 +183,16 @@
         flex-flow: row nowrap;
         justify-content: space-between;
       }
+
+      // must move to right because of the green box
+      .recepy_price {
+        left: 53px;
+        display: inline-block;
+        position: relative;
+      }
     }
+
+    //green box when user chooses a meal
     &-checkContainer {
       width: 59px;
       background-color: $tertiary;
@@ -185,11 +201,28 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
+      left: 54px;
       i {
         color: white;
         transform: scale(1.3);
       }
     }
+    //animations
+    &:hover > &-checkContainer {
+      transition: transform 300ms ease-in-out;
+      transform: translateX(-54px);
+    }
+    &:hover .recepy_price {
+      transition: transform 300ms ease-in-out;
+      transform: translateX(-54px);
+    }
   }
 }
+
+// animation :
+// 1- make a green box inside a single card, box must be at the right of the card
+// 2- push recepy_price and green box 54px to the right IOT put green box outside
+// 3- overflow hidden all the single card IOT hide green box which is out
+// 4- when hover : translate left recepy_price and greenbox
 
