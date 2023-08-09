@@ -49,6 +49,15 @@
   }
 }
 
+//loader
+@mixin loader {
+  background:
+          radial-gradient(closest-side at 50% 12.5%,$primary 90%,#0000 98%)
+          50% 0/20% 80% repeat-y,
+          radial-gradient(closest-side at 12.5% 50%,$primary 90%,#0000 98%)
+          0 50%/80% 20% repeat-x;
+}
+
 //radius
 @mixin buttonRadius {
   border-radius: 25px;
